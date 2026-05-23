@@ -39,6 +39,20 @@ public class Gerenciador {
         if (!temPendente) {
             System.out.println("Nenhuma tarefa pendente!");
         }
+
+    }
+
+    public void editarTarefa(int index, String novoTitulo, String novaDesc, String novaPrioridade, String novoPrazo) {
+        if (index >= 0 && index < listaTarefas.size()) {
+            Tarefa t = listaTarefas.get(index);
+            t.setTitulo(novoTitulo);
+            t.setDescricao(novaDesc);
+            t.setPrioridade(novaPrioridade);
+            t.setDataPrazo(novoPrazo);
+            System.out.println("Tarefa editada com sucesso!");
+        } else {
+            System.out.println("Posição inválida!");
+        }
     }
 
     public void removerTarefa(int index) {

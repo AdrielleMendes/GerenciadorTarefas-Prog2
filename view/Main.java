@@ -11,14 +11,15 @@ public class Main {
         Gerenciador gerenciador = new Gerenciador();
         int opcao = 0;
 
-        while (opcao != 6) {
+        while (opcao != 7) {
             System.out.println("\n============= TO-DO LIST =============");
             System.out.println("1. Adicionar Tarefa");
             System.out.println("2. Listar Todas as Tarefas");
             System.out.println("3. Filtrar Tarefas Pendentes");
             System.out.println("4. Marcar Tarefa como Concluída");
-            System.out.println("5. Remover Tarefa");
-            System.out.println("6. Sair");
+            System.out.println("5. Editar Tarefa");
+            System.out.println("6. Remover Tarefa");
+            System.out.println("7. Sair");
             System.out.print("Escolha uma opção: ");
 
             opcao = scanner.nextInt();
@@ -62,12 +63,34 @@ public class Main {
 
                 case 5:
                     gerenciador.listarTarefas();
+                    System.out.print("Digite o número da tarefa que deseja editar: ");
+                    int indexEditar = scanner.nextInt();
+                    scanner.nextLine();
+
+                    if (gerenciador.getTarefa(indexEditar) != null) {
+                        System.out.print("Novo Título: ");
+                        String nTitulo = scanner.nextLine();
+                        System.out.print("Nova Descrição: ");
+                        String nDesc = scanner.nextLine();
+                        System.out.print("Nova Prioridade (Alta/Média/Baixa): ");
+                        String nPrioridade = scanner.nextLine();
+                        System.out.print("Novo Prazo (dd/mm/aaaa): ");
+                        String nPrazo = scanner.nextLine();
+
+                        gerenciador.editarTarefa(indexEditar, nTitulo, nDesc, nPrioridade, nPrazo);
+                    } else {
+                        System.out.println("Posição inválida.");
+                    }
+                    break;
+
+                case 6:
+                    gerenciador.listarTarefas();
                     System.out.print("Digite o número da tarefa que deseja remover: ");
                     int indexRemover = scanner.nextInt();
                     gerenciador.removerTarefa(indexRemover);
                     break;
 
-                case 6:
+                case 7:
                     System.out.println("Encerrando o programa... Até mais!");
                     break;
 
