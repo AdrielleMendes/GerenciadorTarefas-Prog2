@@ -6,7 +6,7 @@ Projeto prático desenvolvido para a disciplina de **Programação 2** na **Univ
 ##  Sobre o Projeto
 O objetivo deste software é aplicar os conceitos fundamentais de **Programação Orientada a Objetos (POO)** em Java. O sistema permite que o usuário gerencie suas atividades diárias através de um terminal interativo, controlando prazos, prioridades e status de conclusão.
 
-## 🛠️ Funcionalidades
+## Funcionalidades
 - **Cadastro de Tarefas:** Adição de título, descrição, prazo e nível de prioridade.
 - **Gerenciamento de Status:** Opção para marcar tarefas como concluídas ou pendentes.
 - **Listagem Dinâmica:** Visualização completa de todas as tarefas cadastradas.
