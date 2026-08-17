@@ -25,9 +25,7 @@ O código está organizado em pacotes para garantir a separação de responsabil
 * **IDE:** VS Code
 * **Versionamento:** Git & GitHub
 
-##  Equipe
-* [Adrielle Mendes Caboclo]
-* [Yuri Vinicius Leite Lopes]
+
 
 ---
 *Este projeto faz parte do cronograma de avaliações da Unidade Acadêmica de Belo Jardim.*
